@@ -1,5 +1,5 @@
 # hash-helper-tg-bot
-Hash identifier Telegram bot
+Hash identifier Telegram bot [@hash_helper_bot](https://t.me/hash_helper_bot)
 # Usage example
 `/h CFCD208495D565EF66E7DFF9F98764DA`
 # Result
