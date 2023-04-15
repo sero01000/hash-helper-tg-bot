@@ -1,2 +1,11 @@
 # hash-helper-tg-bot
-Telegram bot which identify hash
+Hash identifier Telegram bot
+# Usage example
+`/h CFCD208495D565EF66E7DFF9F98764DA`
+# Result
+CFCD208495D565EF66E7DFF9F98764DA\
+[+] MD5 | hashcat: 0\
+[+] MD4 | hashcat: 900\
+[+] NTLM | hashcat: 1000\
+[+] Domain Cached Credentials | hashcat: 1100\
+[+] Domain Cached Credentials 2 | hashcat: 2100\
