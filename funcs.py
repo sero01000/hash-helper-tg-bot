@@ -29,6 +29,8 @@ def prepare_words(words):
             b64_word = decode_base64(word)
             if b64_word is not None:
                 words_to_check.append(b64_word)
+            if len(word)>4:#smallest hash lenth
+                words_to_check.append(word)
     return words_to_check
 
 
