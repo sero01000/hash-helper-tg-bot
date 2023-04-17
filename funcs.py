@@ -1,6 +1,8 @@
 from name_that_hash import runner
 from hashlib import md5
 from aiogram.types import InputTextMessageContent, InlineQueryResultArticle
+import base64
+
 
 def prepare_text(text):
     text = text.replace("\n", " ")
@@ -21,15 +23,14 @@ def prepare_words(words):
     words_to_check = []
 
     for word in words:
-        # TODO idk smallest hash lenth
-
         if is_hex(word):
-            words_to_check.append(b64_word)
+            words_to_check.append(word)
         else:
             b64_word = decode_base64(word)
             if b64_word is not None:
                 words_to_check.append(b64_word)
     return words_to_check
+
 
 def detect_hashes(hashes, popular_only=False):
     output = runner.api_return_hashes_as_dict(hashes, {"popular_only": popular_only})
@@ -65,7 +66,7 @@ def prepare_querry(title, message, img):
         description=message
     )
     return statistic
-import base64
+
 
 def decode_base64(sb):
     try:
@@ -74,9 +75,10 @@ def decode_base64(sb):
     except Exception as e :
         return None
 
+
 def is_hex(text):
     try:
         int(text, 16)
-        True
+        return True
     except:
-        False
+        return False
