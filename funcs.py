@@ -57,3 +57,11 @@ def prepare_querry(title, message, img):
         description=message
     )
     return statistic
+import base64
+
+def decode_base64(sb):
+    try:
+        b64_dec = base64.b64decode(sb).hex()
+        return b64_dec
+    except Exception as e :
+        return None
