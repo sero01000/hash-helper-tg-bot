@@ -16,16 +16,6 @@ def prepare_detect(words_to_check):
     return answer
 
 
-# def prepare_words(words):
-#     words = list(dict.fromkeys(words))
-#     words_to_check = []
-
-#     for word in words:
-#         # TODO idk smallest hash lenth
-#         if len(word) > 4:
-#             words_to_check.append(word)
-#     return words_to_check
-
 def prepare_words(words):
     words = list(dict.fromkeys(words))
     words_to_check = []
